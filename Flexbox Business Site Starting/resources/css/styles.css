@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Rubik Vinyl';
+    src: url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Navigation Bar */
+header {
+    position: fixed;
+    width: 100%;
+    height: 3.5rem;
+}
+
+header nav {
+    background-color: #00061a;
+    width: 100%;
+
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+    width: 100%;
+}
+
+header nav ul li {
+    flex: 1 2;
+    list-style: none;
+    display: inline;
+    padding: 1rem 1rem;
+    text-align: center;
+    border-right: #e0e7fa 1px solid;
+}
+header nav ul li:last-child {
+    border-right: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+
+    color: #e0e7fa;
+    font-size: 1.2em;
+    font-family: "Damion", cursive;
+
+}
+
+header .logo {
+    width: 100vw;
+    height: auto;
+}
+
+/*Main section*/
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*Mission Section */
+
+.mission-statement {
+    width: 100%;
+    height: 70vh;
+    flex-basis: 800px 200px;
+}
+
+.mission-statement .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.picsum.photos/id/1060/1920/1080.jpg?hmac=cf9l7vQyiMKtojoa7yTtRgOgWx-lzQ_jJItM0B2_rSY");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.mission-statement .banner h2 {
+    background-color: #00061a;
+    width: 100%;
+    font-family: "Damion", cursive;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.mission-statement .banner p {
+    background-color: #00061a;
+    width: 100%;
+    line-height: 1.4;
+    font-family: Damion, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+/*About section*/
+
+.about {
+
+    width: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    color: #8c96b5;
+    height: 500px;
+}
+
+
+
+.about .quote {
+    flex-basis: auto;
+    max-width: 400px;
+    max-height: 400px;
+    font-family: "Rubik Vinyl", sans-serif;
+    text-align: center;
+    word-spacing: 0.5rem;
+
+    padding: 50px;
+    border: 2px solid #8c96b5;
+
+}
+
+/*Services section*/
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    color: #e0e7fa;
+    background-color: #444444;
+}
+
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+    }
+}
+
+.services .service {
+    margin: 20px;
+    border: 1px solid #e0e7fa;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.service h3 {
+    font-size: 2rem;
+    font-family: "Damion", cursive;
+    text-align: center;
+    color: #e0e7fa;
+    line-height: 1.4;
+}
+
+.service p {
+    font-size: 1.2rem;
+    text-align: center;
+}

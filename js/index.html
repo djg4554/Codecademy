@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+    function groceries(array) {
+       if (array.length === 0)  {
+            return "";
+        } else if (array.length === 1) {
+            return array[0].item;
+        } else {
+           return array.reduce((acc, cur, index) => {
+               if (index === array.length - 1) {
+                   return acc + " and " + cur.item;
+               } else {
+                   return acc + ", " + cur.item;
+               }
+           }, "").slice(2);
+       }
+    }
+
+    console.log(groceries( [{item: 'Carrots'}, {item: 'Hummus'}, {item: 'Pesto'}, {item: 'Rigatoni'}] ));
+    // Should return 'Carrots, Hummus, Pesto and Rigatoni'
+    console.log(groceries( [{item: 'Bread'}, {item: 'Butter'}] ));
+    // Should return 'Bread and Butter'
+    console.log(groceries( [{item: 'Cheese Balls'}] ));
+    // Should return 'Cheese Balls'
+</script>
+</body>
+</html>
