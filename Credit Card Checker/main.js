@@ -64,8 +64,16 @@ const idInvalidCardCompanies = (invalidCards) => {
     });
 }
 
+const fromString = (string) => {
+    if (!Number.parseInt(string)) {
+        throw new Error("Invalid credit card number");
+    }
+    return string.split("");
+}
+
 console.log(findInvalidCards(batch))
 console.log(idInvalidCardCompanies(findInvalidCards(batch)));
+console.log(fromString("4485123824290304"));
 
 
 
